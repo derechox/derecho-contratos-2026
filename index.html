@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -167,7 +168,7 @@ h1{
 </h1>
 
 <h2>
-SEGUNDO PARCIAL
+TERCER PARCIAL
 </h2>
 
 <div id="contador"></div>
@@ -372,7 +373,7 @@ const CLASES = [
 
     ["03/11/2026", "Repaso Parcial 2 (casos 3/3)", ""],
 
-    ["06/11/2026", "PARCIAL 2", ""],
+    ["06/11/2026", "PARCIAL 3", ""],
 
     ["10/11/2026", "Clase libre", ""],
 
@@ -624,23 +625,23 @@ function crearCronograma(){
 
 
 // ============================================================
-// ⏳ CONTADOR DEL PARCIAL 2
+// ⏳ CONTADOR DEL PARCIAL 3
 // ============================================================
 //
 // El contador busca automáticamente la clase que diga
-// "PARCIAL 2" dentro del cronograma.
+// "PARCIAL 3" dentro del cronograma.
 //
-// Por eso, si cambiás la fecha del PARCIAL 2 arriba,
+// Por eso, si cambiás la fecha del PARCIAL 3 arriba,
 // el contador se actualiza automáticamente.
 //
 // ============================================================
 
 
-function obtenerFechaParcial2(){
+function obtenerFechaParcial3(){
 
     const parcial = CLASES.find(clase => {
 
-        return clase[1].trim().toUpperCase() === "PARCIAL 2";
+        return clase[1].trim().toUpperCase() === "PARCIAL 3";
 
     });
 
@@ -675,7 +676,7 @@ function obtenerFechaParcial2(){
 function actualizarCuenta(){
 
 
-    const fechaParcial = obtenerFechaParcial2();
+    const fechaParcial = obtenerFechaParcial3();
 
 
     if(!fechaParcial){
@@ -697,7 +698,7 @@ function actualizarCuenta(){
     if(diferencia <= 0){
 
         document.getElementById("contador").innerHTML =
-        "¡¡Llegó el Segundo Parcial!!";
+        "¡¡Llegó el Tercer Parcial!!";
 
         return;
 
@@ -754,3 +755,4 @@ crearCronograma();
 </body>
 
 </html>
+```
