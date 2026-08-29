@@ -167,7 +167,7 @@ h1{
 </h1>
 
 <h2>
-PRIMER PARCIAL
+SEGUNDO PARCIAL
 </h2>
 
 <div id="contador"></div>
@@ -624,23 +624,23 @@ function crearCronograma(){
 
 
 // ============================================================
-// ⏳ CONTADOR DEL PARCIAL 1
+// ⏳ CONTADOR DEL PARCIAL 2
 // ============================================================
 //
 // El contador busca automáticamente la clase que diga
-// "PARCIAL 1" dentro del cronograma.
+// "PARCIAL 2" dentro del cronograma.
 //
-// Por eso, si cambiás la fecha del PARCIAL 1 arriba,
+// Por eso, si cambiás la fecha del PARCIAL 2 arriba,
 // el contador se actualiza automáticamente.
 //
 // ============================================================
 
 
-function obtenerFechaParcial1(){
+function obtenerFechaParcial2(){
 
     const parcial = CLASES.find(clase => {
 
-        return clase[1].trim().toUpperCase() === "PARCIAL 1";
+        return clase[1].trim().toUpperCase() === "PARCIAL 2";
 
     });
 
@@ -675,7 +675,7 @@ function obtenerFechaParcial1(){
 function actualizarCuenta(){
 
 
-    const fechaParcial = obtenerFechaParcial1();
+    const fechaParcial = obtenerFechaParcial2();
 
 
     if(!fechaParcial){
@@ -697,7 +697,7 @@ function actualizarCuenta(){
     if(diferencia <= 0){
 
         document.getElementById("contador").innerHTML =
-        "¡¡Llegó el Primer Parcial!!";
+        "¡¡Llegó el Segundo Parcial!!";
 
         return;
 
