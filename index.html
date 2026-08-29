@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Derecho - Contratos 2026 - 2da Parte</title>
+<title>Derecho - Comercial 2026</title>
 
 <style>
 
@@ -164,11 +163,11 @@ h1{
 <div class="encabezado">
 
 <h1>
-📚 DERECHO - CONTRATOS 2026 - 2DA PARTE
+📚 DERECHO - COMERCIAL 2026
 </h1>
 
 <h2>
-SEGUNDO PARCIAL
+PRIMER PARCIAL
 </h2>
 
 <div id="contador"></div>
@@ -179,7 +178,7 @@ SEGUNDO PARCIAL
 <div class="promo-simple">
 
 <span>
-📚 Resúmenes de materias - Promo especial contratos 🥰
+📚 Resúmenes de materias - Promo especial Comercial 🥰
 </span>
 
 <br>
@@ -243,6 +242,21 @@ Esta página fue desarrollada por iniciativa de los estudiantes con fines exclus
 
 
 // ============================================================
+// ⏰ HORA DEL PARCIAL
+// ============================================================
+//
+// Si el parcial cambia de horario, modificá solamente estos
+// dos valores.
+//
+// Ejemplo: 18:00
+//
+// ============================================================
+
+const HORA_PARCIAL = 18;
+const MINUTOS_PARCIAL = 0;
+
+
+// ============================================================
 // 📚 CRONOGRAMA
 // ============================================================
 //
@@ -252,17 +266,20 @@ Esta página fue desarrollada por iniciativa de los estudiantes con fines exclus
 //
 // Ejemplo:
 //
-// ["25/08/2026", "PARCIAL 2", "https://drive.google.com/..."]
+// ["25/08/2026", "PARCIAL 1", "https://drive.google.com/..."]
 //
 // Si todavía no tenés grabación, dejá:
 //
 // ""
+//
 // ============================================================
 
 
 const CLASES = [
 
+    // ========================================================
     // JUNIO
+    // ========================================================
 
     ["09/06/2026", "Efectos. Partes y terceros", ""],
 
@@ -279,12 +296,16 @@ const CLASES = [
     ["30/06/2026", "Compraventa II", ""],
 
 
+    // ========================================================
     // JULIO
+    // ========================================================
 
     ["03/07/2026", "Suministro", ""],
 
 
+    // ========================================================
     // AGOSTO
+    // ========================================================
 
     ["11/08/2026", "Contrato de consumo", ""],
 
@@ -296,22 +317,24 @@ const CLASES = [
 
     ["25/08/2026", "Clase repaso", ""],
 
-    ["28/08/2026", "PARCIAL 2", ""],
+    ["28/08/2026", "PARCIAL 1", ""],
 
 
+    // ========================================================
     // SEPTIEMBRE
+    // ========================================================
 
-    ["01/09/2026", "Entrega de notas y devolución", ""],
+    ["01/09/2026", "locación (COMUNICACIÓN DE NOTAS VÍA EMAIL - DEVOLUCIÓN DE ERRORES MÁS COMUNES)", ""],
 
     ["04/09/2026", "Clase libre", ""],
 
-    ["08/09/2026", "Recuperatorio Parcial 2", ""],
+    ["08/09/2026", "Recuperatorio Parcial 1", ""],
 
-    ["11/09/2026", "Práctica (Taller 1/3)", ""],
+    ["11/09/2026", "Práctica (Taller 1/3) ASISTIR A 2 CLASES ES CONDICIÓN DE REGULARIDAD", ""],
 
-    ["15/09/2026", "Práctica (Taller 2/3)", ""],
+    ["15/09/2026", "Práctica (Taller 2/3) ASISTIR A 2 CLASES ES CONDICIÓN DE REGULARIDAD", ""],
 
-    ["18/09/2026", "Práctica (Taller 3/3)", ""],
+    ["18/09/2026", "Práctica (Taller 3/3) ASISTIR A 2 CLASES ES CONDICIÓN DE REGULARIDAD", ""],
 
     ["22/09/2026", "Servicios y obra", ""],
 
@@ -320,7 +343,9 @@ const CLASES = [
     ["29/09/2026", "Mandato, consignación y corretaje", ""],
 
 
+    // ========================================================
     // OCTUBRE
+    // ========================================================
 
     ["02/10/2026", "Comunicación en los contratos (Práctica)", ""],
 
@@ -341,11 +366,13 @@ const CLASES = [
     ["30/10/2026", "Práctica — Símil de juicio", ""],
 
 
+    // ========================================================
     // NOVIEMBRE
+    // ========================================================
 
-    ["03/11/2026", "Repaso Parcial 3 (casos 3/3)", ""],
+    ["03/11/2026", "Repaso Parcial 2 (casos 3/3)", ""],
 
-    ["06/11/2026", "PARCIAL 3", ""],
+    ["06/11/2026", "PARCIAL 2", ""],
 
     ["10/11/2026", "Clase libre", ""],
 
@@ -353,7 +380,7 @@ const CLASES = [
 
     ["17/11/2026", "Clase libre", ""],
 
-    ["20/11/2026", "Recuperatorio Parcial 3", ""],
+    ["20/11/2026", "Recuperatorio Parcial 2", ""],
 
     ["24/11/2026", "Devolución general + notas finales", ""],
 
@@ -369,7 +396,9 @@ const CLASES = [
 // ============================================================
 
 
-// Convertir DD/MM/YYYY a fecha
+// ============================================================
+// CONVERTIR DD/MM/YYYY A FECHA
+// ============================================================
 
 function convertirFecha(fechaTexto){
 
@@ -384,7 +413,9 @@ function convertirFecha(fechaTexto){
 }
 
 
-// Obtener día de la semana
+// ============================================================
+// OBTENER DÍA DE LA SEMANA
+// ============================================================
 
 function obtenerDia(fecha){
 
@@ -403,7 +434,9 @@ function obtenerDia(fecha){
 }
 
 
-// Obtener mes
+// ============================================================
+// OBTENER MES
+// ============================================================
 
 function obtenerMes(fecha){
 
@@ -427,7 +460,9 @@ function obtenerMes(fecha){
 }
 
 
-// Crear cronograma
+// ============================================================
+// CREAR CRONOGRAMA
+// ============================================================
 
 function crearCronograma(){
 
@@ -454,7 +489,9 @@ function crearCronograma(){
         const mes = obtenerMes(fecha);
 
 
-        // Crear título del mes
+        // ====================================================
+        // CREAR TÍTULO DEL MES
+        // ====================================================
 
         if(mes !== mesActual){
 
@@ -485,7 +522,9 @@ function crearCronograma(){
         const li = document.createElement("li");
 
 
-        // Detectar automáticamente parciales
+        // ====================================================
+        // DETECTAR AUTOMÁTICAMENTE PARCIALES
+        // ====================================================
 
         const esParcial =
             tema.toUpperCase().includes("PARCIAL") ||
@@ -502,7 +541,9 @@ function crearCronograma(){
         li.dataset.fecha = fechaTexto;
 
 
-        // Fecha visible
+        // ====================================================
+        // FECHA VISIBLE
+        // ====================================================
 
         let contenido =
             obtenerDia(fecha)
@@ -522,7 +563,9 @@ function crearCronograma(){
         li.innerHTML = contenido;
 
 
-        // Check automático
+        // ====================================================
+        // CHECK AUTOMÁTICO
+        // ====================================================
 
         const check = document.createElement("span");
 
@@ -549,7 +592,9 @@ function crearCronograma(){
         li.appendChild(check);
 
 
-        // Link de Google Drive
+        // ====================================================
+        // LINK DE GOOGLE DRIVE
+        // ====================================================
 
         if(linkDrive && linkDrive.trim() !== ""){
 
@@ -558,6 +603,8 @@ function crearCronograma(){
             audio.href = linkDrive;
 
             audio.target = "_blank";
+
+            audio.rel = "noopener noreferrer";
 
             audio.className = "audio-link";
 
@@ -577,21 +624,25 @@ function crearCronograma(){
 
 
 // ============================================================
-// ⏳ CONTADOR DEL PARCIAL 2
+// ⏳ CONTADOR DEL PARCIAL 1
 // ============================================================
 //
 // El contador busca automáticamente la clase que diga
-// "PARCIAL 2" dentro del cronograma.
+// "PARCIAL 1" dentro del cronograma.
 //
-// Por eso NO tenés que modificar ninguna fecha acá.
+// Por eso, si cambiás la fecha del PARCIAL 1 arriba,
+// el contador se actualiza automáticamente.
+//
 // ============================================================
 
 
-function obtenerFechaParcial2(){
+function obtenerFechaParcial1(){
 
-    const parcial = CLASES.find(clase =>
-        clase[1].toUpperCase().includes("PARCIAL 2")
-    );
+    const parcial = CLASES.find(clase => {
+
+        return clase[1].trim().toUpperCase() === "PARCIAL 1";
+
+    });
 
 
     if(!parcial){
@@ -604,9 +655,12 @@ function obtenerFechaParcial2(){
     const fecha = convertirFecha(parcial[0]);
 
 
-    // Hora del parcial: 18:00
-
-    fecha.setHours(18,0,0,0);
+    fecha.setHours(
+        HORA_PARCIAL,
+        MINUTOS_PARCIAL,
+        0,
+        0
+    );
 
 
     return fecha;
@@ -614,11 +668,14 @@ function obtenerFechaParcial2(){
 }
 
 
+// ============================================================
+// ACTUALIZAR CONTADOR
+// ============================================================
 
 function actualizarCuenta(){
 
 
-    const fechaParcial = obtenerFechaParcial2();
+    const fechaParcial = obtenerFechaParcial1();
 
 
     if(!fechaParcial){
@@ -640,7 +697,7 @@ function actualizarCuenta(){
     if(diferencia <= 0){
 
         document.getElementById("contador").innerHTML =
-        "¡¡Llegó el Segundo Parcial!!";
+        "¡¡Llegó el Primer Parcial!!";
 
         return;
 
@@ -680,10 +737,13 @@ function actualizarCuenta(){
 }
 
 
+// ============================================================
+// INICIAR
+// ============================================================
+
 setInterval(actualizarCuenta,1000);
 
 actualizarCuenta();
-
 
 crearCronograma();
 
@@ -694,4 +754,3 @@ crearCronograma();
 </body>
 
 </html>
-```
